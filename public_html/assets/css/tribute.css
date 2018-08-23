@@ -1,0 +1,15 @@
+body {
+  margin-top: 60px;
+  background-color: blue;
+}
+footer, blockquote{
+  background-color: yellow;
+    color:black;
+}
+.container {
+  background-color: red;
+}
+.row {
+  background-color: red;
+  color: white;
+}
