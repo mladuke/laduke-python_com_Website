@@ -13,3 +13,10 @@ footer, blockquote{
   background-color: red;
   color: white;
 }
+
+#image {
+  max-width: 50%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
