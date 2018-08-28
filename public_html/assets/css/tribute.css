@@ -2,13 +2,16 @@ body {
   margin-top: 60px;
   background-color: blue;
 }
-footer, blockquote{
+
+footer, blockquote {
   background-color: yellow;
-    color:black;
+  color: black;
 }
+
 .container {
   background-color: red;
 }
+
 .row {
   background-color: red;
   color: white;
