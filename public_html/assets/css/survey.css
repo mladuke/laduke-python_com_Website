@@ -1,0 +1,33 @@
+body {
+  margin-top: 60px;
+  background-color: black;
+  color: #A38B63;
+}
+
+footer, blockquote {
+  background-color: black;
+  color: #CAC2A8;
+
+}
+
+#title {
+  background-color: black;
+  color: #E8BA7F;
+  text-align: center;
+}
+.container {
+  background-color: red;
+  color: #A38B63;
+}
+
+.row {
+  background-color: red;
+  color: white;
+}
+
+#image {
+  max-width: 50%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
