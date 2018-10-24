@@ -6,7 +6,7 @@
 
 <head>
   <link rel="stylesheet" href="assets/css/survey.css">
-  <title>Matt LaDuke Homepage</title>
+  <title>Path of Exile Survey</title>
   <meta charset="utf-8" />
 </head>
 
@@ -16,13 +16,75 @@
       <h1 id="title">Survey Form</h1>
     </div>
     <div id="body">
-      <p id="description">What kind of Path of Exile player are you?</p>
-      <div id="survey-form">
-        Name: <input type="text" id="name" placeholder="First Last"><br>
-        Email: <input type="email" id="emailAddress" placeholder="name@host.com"><br>
-        Years playing Path of Exile <input type="number" id="years" placeholder="0"><br>
-
+      <p id="description" class="text-center">What kind of Path of Exile player are you?</p>
+      <form id="survey-form">
+        <div>
+        <label id="name-label"class="labels" for="name">* Name: </label>
+        <input required type="text" id="name" class="rightTab" placeholder="Enter your name">
+        </div>
+        <div>
+         <label id="email-label" class="labels" for="email">* Email: </label>
+         <input required type="email" id="email" class="rightTab" placeholder="Enter your Email">
+        </div>
+        <div>
+        <label id="number-label" class="labels" for="number">* Years playing Path of Exile : </label>
+       <input required type="number" id="number" class="rightTab" placeholder="0 - 6 years (whole numbers only)" min="0" max="6">
+       </div>
+       <div>
+            <div class="labels">
+                <label for="playstyle">* Which is your favorite playstyle?</label>
+            </div>
+            <div class="rightTab">
+                <select id="dropdown" name="playstyle" class="dropdown">
+                    <option disabled selected value>Select an option</option>
+                    <option  value="Softcore">Softcore</option>
+                    <option value="SoftcoreSSF">Softcore SSF</option>
+                    <option value="Hardcore">Hardcore</option>
+                    <option value="HardcoreSSF">Hardcore SSF </option>
+                    <option value="All">All of the Above</option>
+                </select>
+            </div>
+        </div>
+        <div>
+          <div class="labels">
+            <label for="League">* Where do you spend your time?</label>
+          </div>
+          <div class="rightTab">
+            <ul>
+              <li class="radio"><label>League<input checked="checked" name="radio-buttons" value="1"  type="radio" class="league" ></label></li>
+              <li class="radio"><label>Standard<input name="radio-buttons" value="2"  type="radio" class="league" ></label></li>
+              <li class="radio"><label>Both<input name="radio-buttons" value="3"  type="radio" class="league" ></label></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="labels">
+            <label for="character">* What class do you play?<br>(Check all that apply): </label>
+          </div>
+          <div class="rightTab">
+            <ul id="character" style="list-style: none;">
+              <li class="checkbox"><label><input name="char" value="1" type="checkbox" class="character">Duelist</label></li>
+              <li class="checkbox"><input name="char" value="2" type="checkbox" class="character">Marauder</li>
+              <li class="checkbox"><label><input name="char" value="3" type="checkbox" class="character">Ranger</label></li>
+              <li class="checkbox"><label><input name="char" value="4" type="checkbox" class="character">Shadow</label></li>
+              <li class="checkbox"><label><input name="char" value="5" type="checkbox" class="character">Templar</label></li>
+              <li class="checkbox"><label><input name="char" value="6" type="checkbox" class="character">Witch</label></li>
+              <li class="checkbox"><label><input name="char" value="7" type="checkbox" class="character">Scion</label></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+      <div class="labels">
+        <label for="comments">Any other comments?</label>
       </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+    </div>     
+   <div class="wrapper">
+  <button id="submit" class="text-center" type="submit">Submit</button>
+  </div>
+      </form>
     </div>
     <footer class="text-center">
       <hr>
