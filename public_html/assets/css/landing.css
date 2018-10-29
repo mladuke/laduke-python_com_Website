@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 60px;
+  background-color: peru;
+}
+
+footer, blockquote {
+  background-color: peru;
+  color: black;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container {
+  background-color: grey;
+}
+
+.row {
+  background-color: grey;
+  color: black;
+}
+
+#image {
+  max-width: 50%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+
+#header-img{
+  display: inline-block;
+  height: 50px;
+  width:50px;
+  width: 10%;
+}
+
+#header{
+  display: inline-block;
+  background-color: brown;
+  width: 600px;
+  height: 50px;
+}
+
+#nav-bar{
+display: inline-block;
+}
+
+.nav-link{
+display: inline-block;
+width: 90px;
+vertical-align: middle;
+height: 50px;
+}
+
+#nav-text{
+  display: inline-block;
+  width: 250px;
+  font-size: 20px;
+  vertical-align: middle;
+  height: 50px;
+}
