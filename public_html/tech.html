@@ -6,7 +6,7 @@
 
 <head>
 	<link rel="stylesheet" href="assets/css/tech.css">
-	<title id="title"> TBD Documentation</title>
+	<title id="title"> pywhois</title>
 	<meta charset="utf-8" />
 </head>
 
@@ -14,59 +14,88 @@
 	<header id="header">
 	</header>
 	<main id="main-doc">
-		<section class="main-section" id="Header1">
-			<header>Header1</header>
-			<p></p>
-			<p></p>
-			<code></code>
+		<section class="main-section" id="What_is_pywhois">
+			<header>What is pywhois</header>
+			<p>Pywhois is a Python module for retrieving WHOIS information of domains.</p>
+			<p>Pywhois works with Python 2.4+ and has no external dependencies.</p>
+		</section>
+		<section class="main-section" id="Installation">
+			<header>Installation</header>
+			<p>The installation of pywhois is done through the pip command.</p>
+			<code>
+	pip install python-whois</code>
+			<p>Now when the package is installed, you can start using it.</p>
+			<p>Remember, that you have to import it first.</p>
+			<code>
+	>>> import whois
+			</code>
+			
+		</section>
+		<section class="main-section" id="Pywhois_Usage">
+			<header>Pywhois Usage</header>
+			<p>We can use the pywhois module to query a WHOIS server directly and to parse WHOIS data for a given domain.</p>
+			<p>We are able to extract data for all the popular TLDs (com, org, net, ...)</p>
+		</section>
+		<section class="main-section" id="Pywhois_Examples">
+			<header>Pywhois Examples</header>
+			<p>On the pywhois project website, we can see how we can use pywhois to extract data.<p></p>
 			<ol>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ol>
+				<li>Let's begin by importing the whois module and create a variable.</p>
+			
+			<code>
+	>>> import whois
+	>>> w = whois.whois('pythonforbeginners.com')
+			</code></li>
+			<li><p>To print the values of all found attributes, we simple type:</p>
+			<code>
+	>>> print w</code>
+			<p>The output should look something like this:</p>
+			<code>
+	creation_date: [datetime.datetime(2012, 9, 15, 0, 0), '15 Sep 2012 20:41:00']
+	domain_name: ['PYTHONFORBEGINNERS.COM', 'pythonforbeginners.com']
+	...
+	...
+	updated_date: 2013-08-20 00:00:00
+	whois_server: whois.enom.com
+			</code></li>
+			<li><p>We can print out any attribute we want.  Say, that you just want to print out the expiration date:
+			</p>
+			<code>
+	>>> w.expiration_date</code></li>
+			<li><p>Show the content downloaded from the whois server:</p>
+			<code>
+	>>> w.text</code></li>
+			<li><p>To make the program a bit more interactive, we can add a prompt where users can put any domain they want retrieve WHOIS information for.</p>
+			<code>
+	import whois
+	data = raw_input("Enter a domain: ")
+	w = whois.whois(data)
+	print w
+			</code></li>
+		</ol>
+			<p>With the help of the pywhois module, we can use Python to do WHOIS lookups.</p>
 		</section>
-		<section class="main-section" id="Header2">
-			<header>Header2</header>
-			<p></p>
-			<p></p>
-			<code></code>
-		</section>
-		<section class="main-section" id="Header3">
-			<header>Header3</header>
-			<p></p>
-			<p></p>
-			<code></code>
-		</section>
-		<section class="main-section" id="Header4">
-			<header>Header4</header>
-			<p></p>
-			<p></p>
-			<code></code>
-		</section>
-		<section class="main-section" id="Header5">
-			<header>Header5</header>
-			<p></p>
-			<p></p>
-			<code></code>
+		<section class="main-section" id="More_Reading">
+			<header>More Reading</header>
+			<p>For more information, see the repository at  <a href="https://bitbucket.org/richardpenman/pywhois">https://bitbucket.org/richardpenman/pywhois</a> .</p>
 		</section>
 	</main>
 	<nav id="navbar">
-		<header>TBD Documentation</header>
+		<header>USING PYWHOIS FOR RETRIEVING WHOIS INFORMATION</header>
 		<ul>
-				<li><a class="nav-link" href="#Header1">Header1</a></li>
-				<li><a class="nav-link" href="#Header2">Header2</a></li>
-				<li><a class="nav-link" href="#Header3">Header3</a></li>
-				<li><a class="nav-link" href="#Header4">Header4</a></li>
-				<li><a class="nav-link" href="#Header5">Header5</a></li>
+				<li><a class="nav-link" href="#What_is_pywhois">What is pywhois</a></li>
+				<li><a class="nav-link" href="#Installation">Installation</a></li>
+				<li><a class="nav-link" href="#Pywhois_Usage">Pywhois Usage</a></li>
+				<li><a class="nav-link" href="#Pywhois_Examples">Pywhois Examples</a></li>
+				<li><a class="nav-link" href="#More_Reading">More Reading</a></li>
 		</ul>
 
 		
 	</nav>
 	<footer id="footer">
 		<hr>
-		<p>Written and coded by <a href="https://www.freecodecamp.com/mladuke" target="_blank">Matt LaDuke</a>.</p>
+		<p> Adapted from <a href="https://www.pythonforbeginners.com/python-on-the-web/using-pywhois/">Python for Beginners</a></p>
+		<p>This page was coded by <a href="https://www.freecodecamp.com/mladuke" target="_blank">Matt LaDuke</a>.</p>
 	</footer>
 </body>
 
